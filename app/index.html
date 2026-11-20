@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Leonida Trophy Atlas — GTA VI Trophy Guide &amp; Tracker</title>
+<meta name="description" content="A complete, cited guide and checklist for all 55 PlayStation 5 trophies of Grand Theft Auto VI: roadmap to the platinum, missable flags, and an offline tracker.">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="header-inner">
+    <div>
+      <h1>Leonida Trophy Atlas</h1>
+      <p class="tagline">Every GTA VI trophy on PlayStation 5 — guided, cited, and tracked. All 55 trophies, all offline, one playthrough.</p>
+    </div>
+    <div class="progress-box" id="progress-box" aria-live="polite">
+      <div class="progress-line"><span id="progress-count">0 / 55</span><span id="progress-pct">0%</span></div>
+      <div class="progress-bar"><div class="progress-fill" id="progress-fill" style="width:0%"></div></div>
+      <div class="grade-counts" id="grade-counts"></div>
+    </div>
+  </div>
+</header>
+
+<main>
+  <section class="facts" id="facts" aria-label="At a glance"></section>
+
+  <section class="toolbar" aria-label="Tracker tools">
+    <div class="search-row">
+      <label class="visually-hidden" for="search">Search trophies</label>
+      <input type="search" id="search" placeholder="Search a trophy, a mission, a place…" autocomplete="off">
+    </div>
+    <div class="filters" id="filters" role="group" aria-label="Filter by kind">
+      <button data-kind="all" class="active" type="button">All <span class="fcount" data-count-for="all"></span></button>
+      <button data-kind="story" type="button">Story <span class="fcount" data-count-for="story"></span></button>
+      <button data-kind="missable" type="button">Missable <span class="fcount" data-count-for="missable"></span></button>
+      <button data-kind="collectibles" type="button">Collectibles <span class="fcount" data-count-for="collectibles"></span></button>
+      <button data-kind="activities" type="button">Activities <span class="fcount" data-count-for="activities"></span></button>
+      <button data-kind="online" type="button">Online <span class="fcount" data-count-for="online"></span></button>
+    </div>
+    <div class="tools-row">
+      <label for="grade-filter">Grade</label>
+      <select id="grade-filter">
+        <option value="all">All grades</option>
+        <option value="platinum">Platinum</option>
+        <option value="gold">Gold</option>
+        <option value="silver">Silver</option>
+        <option value="bronze">Bronze</option>
+      </select>
+      <label class="spoiler-label" for="spoiler-toggle">
+        <input type="checkbox" id="spoiler-toggle" checked>
+        Spoiler mode — hide story trophy names until earned
+      </label>
+      <span class="spacer"></span>
+      <button id="export-btn" type="button">Export progress</button>
+      <button id="import-btn" type="button">Import progress</button>
+      <input type="file" id="import-file" accept="application/json,.json" class="visually-hidden" aria-label="Import progress file">
+      <button id="reset-btn" type="button">Reset</button>
+    </div>
+    <p class="result-line" id="result-line" aria-live="polite"></p>
+  </section>
+
+  <section class="roadmap" id="roadmap" aria-label="Roadmap to the platinum">
+    <h2>Roadmap to the Platinum</h2>
+    <p class="roadmap-intro">About 200 hours, one playthrough, no online trophies, no New Game+, no mission replay. Play it in this order.</p>
+    <div class="stages" id="stages"></div>
+  </section>
+
+  <section aria-label="Trophy list">
+    <h2 id="list-heading">All trophies</h2>
+    <div class="trophy-grid" id="trophy-grid"></div>
+    <p class="empty-state" id="empty-state" hidden>No trophies match this filter. Try “All”, or clear the search.</p>
+  </section>
+
+  <section class="about" aria-label="About this guide">
+    <h2>About this guide</h2>
+    <p>Names, descriptions and grades are the official ones, as PlayStation publishes them, cross-checked against the Exophase trophy list. Every guide is written in our own words, and every specific step or location carries a named source beside it. Where the guides disagree — or where a trophy's method is not yet confirmed — the guide says so instead of guessing. Five trophies were still unconfirmed in the guides at the time of writing: In The Beginning…, Capital Offense, Bad Luck, I Guess, The Truth Is Out There and Ten Pin, plus the unique animal for Fair Game.</p>
+    <p>Progress is stored only in your browser (localStorage). Export downloads a JSON file you can keep or move to another device; Import reads it back. Nothing here sends any data anywhere — the page works fully offline.</p>
+    <p class="fineprint">An unofficial fan guide. Not affiliated with, endorsed by, or connected to Rockstar Games, Take-Two Interactive, Sony Interactive Entertainment, or PlayStation. Grand Theft Auto and GTA are trademarks of Take-Two Interactive. No game art, logos or screenshots are used here.</p>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <p>Leonida Trophy Atlas — built for the make.fun GTA 6 trophy guide bounty. Sources are linked on every trophy.</p>
+</footer>
+
+<script src="app.js"></script>
+</body>
+</html>
